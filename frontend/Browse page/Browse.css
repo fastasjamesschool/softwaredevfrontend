@@ -25,6 +25,8 @@ body{
     width: 95%;
 }
 nav{
-    width: 100%;
-    background-color: green;
+    font-size: 25px;
+    
+}
+.navElement{
 }
