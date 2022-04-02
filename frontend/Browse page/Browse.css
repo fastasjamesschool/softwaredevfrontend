@@ -26,7 +26,14 @@ body{
 }
 nav{
     font-size: 25px;
-    
 }
-.navElement{
+.logo{
+    max-width: 100px;
+    height: auto;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: grey;
 }
