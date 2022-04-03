@@ -12,13 +12,15 @@ main{
 }
 h1{
     display: flex;
+    padding-bottom: 30px;
     max-width: 30%;
     margin: 0 auto;
     color: white;
 }
 .LoginForm{
-    margin: 30px;
+    padding-bottom: 30px;
 }
+
 .forgotPassword{
     color: white;
     font-size: 20px;

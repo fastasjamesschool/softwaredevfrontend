@@ -1,0 +1,26 @@
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 0 auto;
+}
+.mainHeading{
+    text-align: center;
+}
+.selection{
+    font-size: 35px;
+}
+body{
+    font-family: Graphik,Helvetica,Arial,sans-serif;
+    margin: 20px;
+    position: relative;
+    background-color: #35363A;
+    color: white;
+}
+.accountSelection{
+    height: 300px;
+    background-color: blue;
+}
+.lineDiv{
+    background-color: red;
+}
