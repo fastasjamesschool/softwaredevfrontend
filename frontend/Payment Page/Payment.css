@@ -1,25 +1,25 @@
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 0 auto;
+}
 body{
     font-family: Graphik,Helvetica,Arial,sans-serif;
     margin: 20px;
     position: relative;
     background-color: #35363A;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    max-width: 30%;
-    margin: 0 auto;
-}
 h1{
     display: flex;
-    max-width: 30%;
-    margin: 0 auto;
+    margin: 10px auto;
     color: white;
 }
-.LoginForm{
-    margin: 30px;
-}
-.forgotPassword{
+.textAboveBoxes{
     color: white;
     font-size: 20px;
+    margin-bottom: 15px;
+}
+.paymentForm{
+    margin-bottom: 30px;
 }
