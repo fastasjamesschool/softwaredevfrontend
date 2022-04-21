@@ -13,14 +13,17 @@ main{
 body{
     font-family: Graphik,Helvetica,Arial,sans-serif;
     margin: 20px;
-    position: relative;
+    position: static;
     background-color: #35363A;
     color: white;
 }
-.accountSelection{
-    height: 300px;
-    background-color: blue;
+.createAccount{
+    border-right: 1px solid lightgray;
 }
-.lineDiv{
-    background-color: red;
+section{
+  position: relative;
+  margin: 0 auto;
+  top: 30%;
+  
+ 
 }
