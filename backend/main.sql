@@ -53,5 +53,8 @@ CREATE TABLE PURCHASE_INFO(
     
  ALTER TABLE `USERS` CHANGE `USERNAME` `USERNAME` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL; 
  -- Length of Username was too short, added extra 10 to the username 
+ 
+ ALTER TABLE `MOVIES` CHANGE `PNG` `PNG` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL; 
+ -- made PNG value NOT NULL, did not preferance it in ALTER TABLE statement on line 43
 
--- LAST EDITED BY SEAN SHEA, SUN APRIL 24th, 4:24 PM EST 
+-- LAST EDITED BY SEAN SHEA, SUN APRIL 24th, 4:45 PM EST 
