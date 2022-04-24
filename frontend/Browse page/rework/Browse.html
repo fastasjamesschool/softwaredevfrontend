@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="Browse.css">
         <link rel="stylesheet" href="lightslider.css">
         <script src="jquery-3.6.0.min.js"></script>
+        <!--used lightslider plugin for sliders
+        http://sachinchoolur.github.io/lightslider/-->
         <script src="lightslider.js"></script>
     </head>
     <body>
@@ -20,11 +22,9 @@
             <a class = "nav-link active" href="#">account</a>
         </div>
     </nav>   
-        <section class = "main">
+        <section class = "primary-slider">
             <header class = "genre">Comedy</header>
-            <!--figure out how to make multiple of the sliders to work together 
-                https://github.com/sachinchoolur/lightslider/issues/252-->
-            <ul id="autoWidth" class="cs-hidden">
+            <ul id="sliderOne" class="cs-hidden first-slider">
                 <li class="item-a">
                     <div class="showcase-box">
                         <a href="/frontend/movie descriptions/movie description template.html">
@@ -50,10 +50,10 @@
             </ul>
         </section>
         
-        <section class = "container-fluid comedyMovies movieContainer">
+        <section class = "secondary-slider">
             <header class = "genre">action</header>
             
-            <ul id="autoWidth" class="cs-hidden">
+            <ul id="sliderTwo" class="cs-hidden second-slider">
                 <li class="item-e">
                     <div class="showcase-box">
                         <a href="/frontend/movie descriptions/movie description template.html">
@@ -82,7 +82,7 @@
         <section class ="container-fluid dramaMovies movieContainer">
             <header class = "genre">horror</header>
             
-            <ul id="autoWidth" class="cs-hidden">
+            <ul id="sliderThree" class="cs-hidden">
                 <li class="item-a">
                     <div class="showcase-box">
                         <a href="/frontend/movie descriptions/movie description template.html">
@@ -109,7 +109,7 @@
         </section>
         <section class ="container-fluid superHero movieContainer">
             <header class = "genre">something else</header>
-            <ul id="autoWidth" class="cs-hidden">
+            <ul id="sliderFour" class="cs-hidden">
                 <li class="item-a">
                     <div class="showcase-box">
                         <a href="/frontend/movie descriptions/movie description template.html">
@@ -136,11 +136,32 @@
         </section>
         <script>
             $(document).ready(function() {
-                $('#autoWidth').lightSlider({
+                $('#sliderOne').lightSlider({
                     autoWidth:true,
                     loop:true,
                     onSliderLoad: function() {
-                        $('#autoWidth').removeClass('cS-hidden');
+                        $('#sliderOne').removeClass('cS-hidden');
+                    } 
+                }); 
+                $('#sliderTwo').lightSlider({
+                    autoWidth:true,
+                    loop:true,
+                    onSliderLoad: function() {
+                        $('#sliderTwo').removeClass('cS-hidden');
+                    } 
+                });  
+                $('#sliderThree').lightSlider({
+                    autoWidth:true,
+                    loop:true,
+                    onSliderLoad: function() {
+                        $('#sliderThree').removeClass('cS-hidden');
+                    } 
+                });  
+                $('#sliderFour').lightSlider({
+                    autoWidth:true,
+                    loop:true,
+                    onSliderLoad: function() {
+                        $('#sliderFour').removeClass('cS-hidden');
                     } 
                 });  
             });
