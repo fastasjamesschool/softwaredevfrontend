@@ -1,7 +1,7 @@
 <?php
 require 'scripts/connectdatabase.php';
 $table = "MOVIES";
-$sql = $db->query("SELECT TITLE FROM $table");
+$sql = $db->query("SELECT TITLE,PNG  FROM $table");
 $members = $sql->fetchAll();
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,8 @@ $members = $sql->fetchAll();
     <?php foreach ($members as $member) { ?>
         <li class="movie-summ">
                 <h2><?= ($member['TITLE']) ?></h2>
-                <img src="../pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>">
+                <img src="../pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" >
          </li>
     <?php } ?>
 </body>
+
