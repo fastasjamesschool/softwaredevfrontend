@@ -1,16 +1,16 @@
 <?php
 require 'scripts/connectdatabase.php';
-$table = "USERS";
-$sql = $db->query("SELECT USERNAME FROM $table");
+$table = "MOVIES";
+$sql = $db->query("SELECT TITLE FROM $table");
 $members = $sql->fetchAll();
 ?>
 <!DOCTYPE html>
 <body>
     <?php foreach ($members as $member) { ?>
-    <div class="movie-summ">
-        <h2><?= ($member['TITLE'])?></h2>
-        <img src='../pictures/Amazingworldofgumball.jpg' alt='hello'>
-    </div>    
-    <?php } ?> 
+        <div class="movie-summ">   
+                <h2><?= ($member['TITLE']) ?></h2>
+                <img src='../pictures/Amazingworldofgumball.jpg' alt='hello'>
+         </div>
+    <?php } ?>
 </body>
 
