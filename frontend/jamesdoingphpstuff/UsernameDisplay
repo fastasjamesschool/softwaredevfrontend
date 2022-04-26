@@ -1,0 +1,21 @@
+<?php
+require 'scripts/connectdatabase.php';
+
+session_start();
+if(isset($_POST['submit'])) {
+$_SESSION['username'] = $_POST['username'];
+}
+
+<form method="post">
+<input type="text" name="username">
+<input type="password>
+<input type="submit" name="submit">
+</form>
+
+$email = $_POST['email'];
+$query = "SELECT * FROM users WHERE email='$email'"
+$row = mysql_fetch_array($query);
+$username = $row['username'];
+
+echo "Welcome back, " . $username . ", enjoy your stay!<br>";
+?>
