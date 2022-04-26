@@ -15,7 +15,7 @@ $_SESSION['username'] = $_POST['username'];
 $email = $_POST['email'];
 $query = "SELECT * FROM users WHERE email='$email'"
 $row = mysql_fetch_array($query);
-$username = $row['username'];
+$fname = $row['fname'];
 
-echo "Welcome back, " . $username . ", enjoy your stay!<br>";
+echo "Welcome back, " . $fname . ", enjoy your stay!<br>";
 ?>
