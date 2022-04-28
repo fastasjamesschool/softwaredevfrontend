@@ -1,0 +1,15 @@
+<?php
+require 'scripts/connectdatabase.php';
+$table = "USERS";
+$sql = $db->query("SELECT FNAME,LNAME  FROM $table");
+$members = $sql->fetchAll();
+?>
+<!DOCTYPE html>
+<body>
+    <?php foreach ($members as $member) { ?>
+        <li class="movie-summ">
+                <h2><?= ($member['FNAME']) ?></h2>
+                <h2><?= ($member['LNAME']) ?></h2>
+         </li>
+    <?php } ?>
+</body>
