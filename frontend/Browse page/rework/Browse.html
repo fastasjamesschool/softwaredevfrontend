@@ -12,16 +12,43 @@
         <script src="lightslider.js"></script>
     </head>
     <body>
-    <nav class = "navbar navbar-expand-lg">
-        <div class="container-fluid justify-content-md-start navElement">
-            <a href = "#" class = "navbar-brand">
-                <img  class = "logo" src = "/frontend/pictures/logo cropped.png">
-            </a>
-        </div>
-        <div class="container-fluid justify-content-md-end navElement">
-            <a class = "nav-link active" href="#">account</a>
-        </div>
-    </nav>   
+        <nav class = "navbar navbar-expand-lg">
+            <div class="container-fluid justify-content-md-start navElement">
+                <a href = "#" class = "navbar-brand">
+                    <img  class = "logo" src = "/frontend/pictures/logo cropped.png">
+                </a>
+            </div>
+            <div class="container-fluid justify-content-md-end navElement">
+                <a class = "nav-link active" href="#">account</a>
+            </div>
+        </nav>   
+        <section>
+            <header class = "genre">purchased movies</header>
+            <ul id="purchaseHistory" class="cs-hidden">
+                <li class="item-a">
+                    <div class="showcase-box">
+                        <a href="/frontend/movie descriptions/movie description template.html">
+                            <img src = "/frontend/pictures/gumball.jpg">
+                        </a>
+                    </div>
+                </li>
+                <li class="item-b">
+                    <div class="showcase-box">
+                        <img src = "/frontend/pictures/movie.png">
+                    </div>
+                </li>
+                <li class="item-c">
+                    <div class="showcase-box">
+                        <img src = "/frontend/pictures/movie.png">
+                    </div>
+                </li>
+                <li class="item-d">
+                    <div class="showcase-box">
+                        <img src = "/frontend/pictures/movie.png">
+                    </div>
+                </li>
+            </ul>
+        </section>
         <section class = "primary-slider">
             <header class = "genre">Comedy</header>
             <ul id="sliderOne" class="cs-hidden first-slider">
@@ -136,6 +163,13 @@
         </section>
         <script>
             $(document).ready(function() {
+                $('#purchaseHistory').lightSlider({
+                    autoWidth:true,
+                    loop:true,
+                    onSliderLoad: function() {
+                        $('#purchaseHistory').removeClass('cS-hidden');
+                    } 
+                });
                 $('#sliderOne').lightSlider({
                     autoWidth:true,
                     loop:true,
