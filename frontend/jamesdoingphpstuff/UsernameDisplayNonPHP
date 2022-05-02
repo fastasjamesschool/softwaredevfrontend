@@ -1,0 +1,6 @@
+<body>
+
+Welcome <?php echo $_POST["email"]; ?>, enjoy your stay<br>
+
+</body>
+</html>
