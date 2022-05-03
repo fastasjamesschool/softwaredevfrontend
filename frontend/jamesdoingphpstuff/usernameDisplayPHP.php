@@ -2,7 +2,7 @@
 require 'scripts/connectdatabase.php';
 
 $email = $_POST['email'];
-$sql = $db->query("SELECT * FROM users WHERE email='$email'");
+$sql = $db->query("SELECT FNAME FROM USERS WHERE email='$email'");
 if (!$sql) {
 	echo 'Could not run query: ' . mysql_error();
 }
