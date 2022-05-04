@@ -16,6 +16,9 @@ VALUES ('Sean Shea', '9999999999999999', '000', '2026/4/24', '83 Windham St, Wil
 INSERT INTO `MOVIES` (`TITLE`, `MOVIE_KEY`, `GENRE`, `LENGTH`, `PRICE`, `PNG`, `RELEASE_DATE`) 
 VALUES ('The Moment', '222222222', 'Thriller', 'We have been waiting for this ', '$9.99', 'in works', 'Sep 26,2020');
 
+INSERT INTO `MOVIES` (`TITLE`, `MOVIE_KEY`, `GENRE`, `LENGTH`, `PRICE`, `PNG`, `RELEASE_DATE`, `MSOURCE`, `DESCRIPTION`)
+VALUES ('The Office', '8968698', 'Sitcom', '0:30', '$4.99', '-', 'Aug, 27, 2019', '-', 'Jim uses Dwight for a classical conditioning experiment, just to mess with him. ');
+
 --above values are work in progress
 
 
