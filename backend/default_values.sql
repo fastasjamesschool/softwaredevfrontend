@@ -25,7 +25,11 @@ VALUES ('Regular Show', '73642509', 'Animation', '0:10', '$4.99', '-', 'Aug 19, 
 INSERT INTO `MOVIES` (`TITLE`, `MOVIE_KEY`, `GENRE`, `LENGTH`, `PRICE`, `PNG`, `RELEASE_DATE`, `MSOURCE`, `DESCRIPTION`) 
 VALUES ('Spongebob Squarepants', '8750462', 'Comedy', '0:25', '$7.99', '-', 'May 24, 2019', '-', 'Spongebob and Patrick tell Squidward he can\'t join the club because there isn\'t enough space.');
 
+INSERT INTO `MOVIES` (`TITLE`, `MOVIE_KEY`, `GENRE`, `LENGTH`, `PRICE`, `PNG`, `RELEASE_DATE`, `MSOURCE`, `DESCRIPTION`)
+VALUES ('Everybody Hates Chris', '79825643', 'Comedy', '0:25', '6$.99', '-', 'September 22, 2005', '-', 'Chris wins a Nobel Prize award, which could be seen as questionable. ');
+
+
 --above values added to database to hold present for the project
 
 
--- LAST EDITED BY SEAN SHEA APRIL 24th, 5:59 PM EST
+-- LAST EDITED BY SEAN SHEA May 3rd, 10:29 PM EST
