@@ -1,3 +1,9 @@
+<?php
+require '../scripts/connectdatabase.php';
+$table = "MOVIES";
+$sql = $db->query("SELECT TITLE,PNG  FROM $table");
+$members = $sql->fetchAll();
+?>
 <!doctype html>
 <html>
     <head>
@@ -48,32 +54,19 @@
                     </div>
                 </li>
             </ul>
-        </section>
+        </section>  
         <section class = "primary-slider">
             <header class = "genre">Comedy</header>
             <ul id="sliderOne" class="cs-hidden first-slider">
-                <li class="item-a">
-                    <div class="showcase-box">
-                        <a href="/frontend/movie descriptions/movie description template.html">
-                            <img src = "/frontend/pictures/gumball.jpg">
-                        </a>
-                    </div>
-                </li>
-                <li class="item-b">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-c">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-d">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
+                <body>
+                    <?php foreach ($members as $member) { ?>
+                        <li class="item-a">
+                            <div class ="showcase-box">
+                                <img src="/pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" >
+                            </div>
+                            </li>
+                    <?php } ?>
+                </body>
             </ul>
         </section>
         
@@ -201,8 +194,10 @@
                 });  
             });
         </script>
+<<<<<<< HEAD:frontend/Browse page/rework/Browse.html
 </body>
 <footer>
     <div class = "copywrite">© 2022 Project Vertigo, all rights reserved</div>
 </footer> 
 </html>
+>>>>>>> b8f62e449b24a56c17e304f2c7f806fe85c33704:frontend/Browse page/rework/Browse.php
