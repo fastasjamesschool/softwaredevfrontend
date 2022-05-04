@@ -26,3 +26,11 @@ h1{
 .textAboveBoxes{
     padding-top: 10px;
 }
+.createAccountLink{
+    text-decoration: none;
+    color: white;
+}
+.createAccountLink:hover{
+    text-decoration: none;
+    color: white;
+}

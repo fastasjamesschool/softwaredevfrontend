@@ -1,0 +1,16 @@
+body{
+    font-family: Graphik,Helvetica,Arial,sans-serif;
+    margin: 0px;
+    position: relative;
+    background-color: #35363A;
+    padding-top: 80px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    margin: 0 auto;
+}
+.LoginForm{
+    padding-bottom: 20px;
+}

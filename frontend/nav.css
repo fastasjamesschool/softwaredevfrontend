@@ -19,3 +19,15 @@ nav{
 .nav-link:hover{
     color: grey;
 }
+footer{
+    margin-top: 80px;
+    background-color: #202020;
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    align-items:center;
+}
