@@ -19,6 +19,8 @@ VALUES ('The Moment', '222222222', 'Thriller', 'We have been waiting for this ',
 INSERT INTO `MOVIES` (`TITLE`, `MOVIE_KEY`, `GENRE`, `LENGTH`, `PRICE`, `PNG`, `RELEASE_DATE`, `MSOURCE`, `DESCRIPTION`)
 VALUES ('The Office', '8968698', 'Sitcom', '0:30', '$4.99', '-', 'Aug, 27, 2019', '-', 'Jim uses Dwight for a classical conditioning experiment, just to mess with him. ');
 
+INSERT INTO `MOVIES` (`TITLE`, `MOVIE_KEY`, `GENRE`, `LENGTH`, `PRICE`, `PNG`, `RELEASE_DATE`, `MSOURCE`, `DESCRIPTION`) 
+VALUES ('Regular Show', '73642509', 'Animation', '0:10', '$4.99', '-', 'Aug 19, 2019', '-', 'Mordecai and Benson have a plan to ask the Bouncer for his Pen.');
 --above values are work in progress
 
 
