@@ -1,16 +1,20 @@
 <?php
 require 'scripts/connectdatabase.php';
 $table = "MOVIES";
-$sql = $db->query("SELECT TITLE,PNG,GENRE  FROM $table WHERE GENRE='Action'");
+$sql1 = $db->query("SELECT TITLE,PNG,GENRE  FROM $table WHERE GENRE='Comedy'");
+$sql2 = $db->query("SELECT TITLE,PNG,GENRE  FROM $table WHERE GENRE='Action'");
+$sql3 = $db->query("SELECT TITLE,PNG,GENRE  FROM $table WHERE GENRE='Thriller'");
 //Change GENRE to whatever values you are looking for aka each movie genre
-$members = $sql->fetchAll();
+$members1 = $sql1->fetchAll();
+$members2 = $sql2->fetchAll();
+$members3 = $sql3->fetchAll();
 ?>
 <!DOCTYPE html>
 <body>
     <?php foreach ($members as $member) { ?>
         <li class="movie-summ">
                 <h2><?= ($member['TITLE']) ?></h2>
-                <img src="../pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" >
+                <img src="/pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" >
          </li>
     <?php } ?>
 </body>

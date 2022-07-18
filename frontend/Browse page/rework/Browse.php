@@ -1,8 +1,13 @@
 <?php
 require '../scripts/connectdatabase.php';
 $table = "MOVIES";
-$sql = $db->query("SELECT TITLE,PNG  FROM $table");
-$members = $sql->fetchAll();
+$sql1 = $db->query("SELECT TITLE,PNG,GENRE,MSOURCE  FROM $table WHERE GENRE='Comedy'");
+$sql2 = $db->query("SELECT TITLE,PNG,GENRE,MSOURCE  FROM $table WHERE GENRE='Action'");
+$sql3 = $db->query("SELECT TITLE,PNG,GENRE,MSOURCE  FROM $table WHERE GENRE='Thriller'");
+//Change GENRE to whatever values you are looking for aka each movie genre
+$members1 = $sql1->fetchAll();
+$members2 = $sql2->fetchAll();
+$members3 = $sql3->fetchAll();
 ?>
 <!doctype html>
 <html>
@@ -59,10 +64,10 @@ $members = $sql->fetchAll();
             <header class = "genre">Comedy</header>
             <ul id="sliderOne" class="cs-hidden first-slider">
                 <body>
-                    <?php foreach ($members as $member) { ?>
+                    <?php foreach ($members1 as $member) { ?>
                         <li class="item-a">
                             <div class ="showcase-box">
-                                <img src="/pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" >
+                            <a href= "/video/<?= ($member['MSOURCE'])?>">  <img src="/pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" > </a>
                             </div>
                             </li>
                     <?php } ?>
@@ -74,28 +79,13 @@ $members = $sql->fetchAll();
             <header class = "genre">action</header>
             
             <ul id="sliderTwo" class="cs-hidden second-slider">
-                <li class="item-e">
-                    <div class="showcase-box">
-                        <a href="/frontend/movie descriptions/movie description template.html">
-                            <img src = "/frontend/pictures/gumball.jpg">
-                        </a>
-                    </div>
-                </li>
-                <li class="item-f">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-g">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-h">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
+            <?php foreach ($members2 as $member) { ?>
+                <li class="item-a">
+                            <div class ="showcase-box">
+                            <a href= "/video/<?= ($member['MSOURCE'])?>">  <img src="/pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" > </a>
+                            </div>
+                            </li>
+                    <?php } ?>
             </ul>
         </section>
         
@@ -103,55 +93,25 @@ $members = $sql->fetchAll();
             <header class = "genre">horror</header>
             
             <ul id="sliderThree" class="cs-hidden">
+            <?php foreach ($members3 as $member) { ?>
                 <li class="item-a">
-                    <div class="showcase-box">
-                        <a href="/frontend/movie descriptions/movie description template.html">
-                            <img src = "/frontend/pictures/gumball.jpg">
-                        </a>
-                    </div>
-                </li>
-                <li class="item-b">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-c">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-d">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
+                            <div class ="showcase-box">
+                            <a href= "/video/<?= ($member['MSOURCE'])?>">  <img src="/pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" > </a>
+                            </div>
+                            </li>
+                    <?php } ?>
             </ul>
         </section>
         <section class ="container-fluid superHero movieContainer">
             <header class = "genre">something else</header>
             <ul id="sliderFour" class="cs-hidden">
+            <?php foreach ($members1 as $member) { ?>
                 <li class="item-a">
-                    <div class="showcase-box">
-                        <a href="/frontend/movie descriptions/movie description template.html">
-                            <img src = "/frontend/pictures/gumball.jpg">
-                        </a>
-                    </div>
-                </li>
-                <li class="item-b">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-c">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
-                <li class="item-d">
-                    <div class="showcase-box">
-                        <img src = "/frontend/pictures/movie.png">
-                    </div>
-                </li>
+                            <div class ="showcase-box">
+                            <a href= "/video/<?= ($member['MSOURCE'])?>">  <img src="/pictures/<?= ($member['PNG'] ?? 'Batman.jpeg') ?>" > </a>
+                            </div>
+                            </li>
+                    <?php } ?>
             </ul>
         </section>
         
@@ -194,10 +154,9 @@ $members = $sql->fetchAll();
                 });  
             });
         </script>
-<<<<<<< HEAD:frontend/Browse page/rework/Browse.html
+
 </body>
 <footer>
     <div class = "copywrite">© 2022 Project Vertigo, all rights reserved</div>
 </footer> 
 </html>
->>>>>>> b8f62e449b24a56c17e304f2c7f806fe85c33704:frontend/Browse page/rework/Browse.php
